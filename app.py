@@ -1,10 +1,15 @@
 from llama_index.llms.ollama import Ollama
+from fastapi import FastAPI
+
+app = FastAPI()
 
 class OllamaResponse:
     def __init__(self, model_name=None):
         ''' If No Model is Specified, Ollama will assume Meta-Llama-3-8B '''
         self.model_name = "llama3" if not model_name else model_name
         self.llm = Ollama(model=self.model_name)
+        self.query = None
+        self.response = None
     
     def set_query(self, query):
         ''' Get Query from Client, Set Query for Further Processing '''
@@ -21,6 +26,20 @@ class OllamaResponse:
         return self.response
 
 
+chatbot = OllamaResponse()
+
+@app.get("/query/")
+def receive_query(query: str):
+    ''' Receive Query from Client '''
+    chatbot.set_query(query)
+    chatbot.get_response_from_ollama()
+
+@app.post("/response/")
+def send_response():
+    ''' Send Response to Client '''
+    return chatbot.post_response()
+
+
 if __name__ == '__main__':
 
     test_run = OllamaResponse()
@@ -31,5 +50,6 @@ if __name__ == '__main__':
     test_run.get_response_from_ollama()
 
     response = test_run.post_response()
+
     print(response)
 
