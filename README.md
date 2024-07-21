@@ -6,7 +6,7 @@
 >* STEP 1 : Request Query from User
 >* STEP 2 : Send Query to Server
 >* STEP 3 : Receive Response from Server
->* STEP 4 : Display Query to User
+>* STEP 4 : Display Response to User
 
 ### Server: 
 >* STEP 1 : Receive Query from Client
