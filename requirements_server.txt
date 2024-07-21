@@ -1,0 +1,4 @@
+llama-index-llms-ollama
+fastapi
+uvicorn
+python-dotenv
