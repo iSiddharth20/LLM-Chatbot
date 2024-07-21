@@ -3,3 +3,4 @@ llama-index-llms-ollama
 fastapi
 uvicorn
 requests
+python-dotenv
