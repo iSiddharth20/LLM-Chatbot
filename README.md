@@ -1,21 +1,30 @@
 # Ollama-FastAPI-LlamaIndex
-### Comes with Streamlit UI (Optional)
+#### Client-Server Architecture LLM Chatbot with optional Streamlit UI
 
 ---
 
-### Understand Role of 
+<div align="center">
+
+### Project Demo on YouTube
+[![Project Demo on YouTube](https://img.youtube.com/vi/HSHE49v4_qg/0.jpg)](https://www.youtube.com/watch?v=HSHE49v4_qg)
+
+</div>
+
+---
+
+### Understand Role of:
   * [Server](#role-server) Component
   * [Client](#role-client) Component
-### How to Setup
+### How to Setup:
   * [Server](#setup-server) Component
   * Cient Component [without Streamlit UI](#setup-client-no-ui)
   * Cient Component [with Streamlit UI](#setup-client-with-ui)
-### How to Run
+### How to Run:
   * [Server](#run-server) Component
   * Cient Component [without Streamlit UI](#run-client-no-ui)
   * Cient Component [with Streamlit UI](#run-client-with-ui)
 
-### Prerequisites for Client and Server: 
+### Prerequisites for Client and Server:
   * STEP 1 : Clone this Repo
   * STEP 2 : [Optional but Recommended] Download and Install [Miniconda](https://docs.anaconda.com/miniconda/#latest-miniconda-installer-links), to create and manage conda environments
 
