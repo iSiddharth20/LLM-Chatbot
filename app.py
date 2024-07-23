@@ -5,8 +5,8 @@ app = FastAPI()
 
 class OllamaResponse:
     def __init__(self, model_name=None):
-        ''' If No Model is Specified, Ollama will assume Meta-Llama-3-8B '''
-        self.model_name = "llama3" if not model_name else model_name
+        ''' If No Model is Specified, Ollama will assume Meta-Llama-3.1-8B '''
+        self.model_name = "llama3.1" if not model_name else model_name
         self.llm = Ollama(model=self.model_name)
         self.query = None
         self.response = None
