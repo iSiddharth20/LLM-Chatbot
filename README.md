@@ -50,7 +50,7 @@
 #### Setup for `Server`: 
 * STEP 1 : Download and Install [Ollama](https://ollama.com/download)
 * STEP 2 : Download desired model from Ollama
-<br>&nbsp;&nbsp;NOTE : To download Meta-Llama-3.1-8B, Run command: `ollama run llama3.1`
+<br>&nbsp;&nbsp;NOTE : To download Meta-Llama-3.1-8B, Run command: `ollama pull llama3.1`
 * STEP 3 : [Optional but Recommended] Create a Conda Environment, Run command : `conda create -n "env_server" python=3.11`
 <br>&nbsp;&nbsp;NOTE: This is a one-time setup
 * STEP 4 : [Optional but Recommended] Activate the created Conda Environment with `conda activate env_server`
