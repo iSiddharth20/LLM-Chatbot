@@ -21,15 +21,15 @@
 
 ---
 
-#### What does `Client` do:
 <a name="role-client"></a>
+#### What does `Client` do:
 * STEP 1 : Request Query from User
 * STEP 2 : Send Query to Server
 * STEP 3 : Receive Response from Server
 * STEP 4 : Display Response to User
 
-#### What does `Server` do: 
 <a name="role-server"></a>
+#### What does `Server` do: 
 * STEP 1 : Receive Query from Client
 * STEP 2 : Send Query to Ollama
 * STEP 3 : Receive Response from Ollama
@@ -37,8 +37,8 @@
 
 ---
 
-#### Setup for `Server`: 
 <a name="setup-server"></a>
+#### Setup for `Server`: 
 * STEP 1 : Download and Install [Ollama](https://ollama.com/download)
 * STEP 2 : Download desired model from Ollama
 <br>&nbsp;&nbsp;NOTE : To download Meta-Llama-3-8B, Run command: `ollama run llama3`
@@ -48,8 +48,8 @@
 <br>&nbsp;&nbsp;NOTE: Activate conda environment with each new instance of Terminal
 * STEP 5 : Install Dependencies: `pip install -r requirements_server.txt`
 
-#### Setup for `Client` without Stramlit UI: 
 <a name="setup-client-no-ui"></a>
+#### Setup for `Client` without Stramlit UI: 
 * STEP 1 : [Optional but Recommended] Create a Conda Environment, Run command : `conda create -n "env_client" python=3.11`
 <br>&nbsp;&nbsp;NOTE: This is a one-time setup
 * STEP 2 : [Optional but Recommended] Activate the created Conda Environment with `conda activate env_client`
@@ -58,8 +58,8 @@
 * STEP 4 : Change Server IP and Port Number in `.env` file.
 <br>&nbsp;&nbsp;NOTE: If you are not using separate device as Server, do not change contents of `.env` file
 
-#### Setup for `Client` with Stramlit UI: 
 <a name="setup-client-with-ui"></a>
+#### Setup for `Client` with Stramlit UI: 
 * STEP 1 : [Optional but Recommended] Create a Conda Environment, Run command : `conda create -n "env_client" python=3.11`
 * STEP 2 : [Optional but Recommended] Activate the created Conda Environmen, Run command : `conda activate env_client`
 * STEP 3 : Install Dependencies: `pip install -r requirements_client_ui.txt`
@@ -68,24 +68,24 @@
 
 ---
 
-#### Run `Server` component:
 <a name="run-server"></a> 
+#### Run `Server` component:
 * STEP 1 : [Optional but Recommended] Activate the created Conda Environment, Run command : `conda activate env_server`
 <br>&nbsp;&nbsp;NOTE: Activate conda environment with each new instance of Terminal
 * STEP 2 : Run command : `uvicorn app:app --host 0.0.0.0 --port 8000`
 <br>&nbsp;&nbsp;NOTE: You can change the Port Number, make sure to update it in .env file on client
 * IMP : Do not close the Terminal, else Server will Stop
 
-#### Run `Client` component without Stramlit UI: 
 <a name="run-client-no-ui"></a>
+#### Run `Client` component without Stramlit UI: 
 * STEP 1 : [Optional but Recommended] Activate the created Conda Environment, Run command : `conda activate env_client`
 <br>&nbsp;&nbsp;NOTE: Activate conda environment with each new instance of Terminal
 * STEP 2 : Verify Server IP and Port Number in `.env` file.
 <br>&nbsp;&nbsp;NOTE: If you are not using separate device as Server, do not change contents of `.env` file
 * STEP 3 : Run command : `python client.py`
 
-#### Run `Client` component with Stramlit UI: 
 <a name="run-client-with-ui"></a>
+#### Run `Client` component with Stramlit UI: 
 * STEP 1 : [Optional but Recommended] Activate the created Conda Environment, Run command : `conda activate env_client`
 <br>&nbsp;&nbsp;NOTE: Activate conda environment with each new instance of Terminal
 * STEP 2 : Verify Server IP and Port Number in `.env` file.
