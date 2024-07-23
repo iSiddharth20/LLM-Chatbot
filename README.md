@@ -7,13 +7,13 @@
   * [Server](#role-server) Component
   * [Client](#role-client) Component
 ### How to Setup
-  * [Server](setup-server) Component
-  * Cient Component [without Streamlit UI](setup-client-no-ui)
-  * Cient Component [with Streamlit UI](setup-client-with-ui)
+  * [Server](#setup-server) Component
+  * Cient Component [without Streamlit UI](#setup-client-no-ui)
+  * Cient Component [with Streamlit UI](#setup-client-with-ui)
 ### How to Run
-  * [Server](run-server) Component
-  * Cient Component [without Streamlit UI](run-client-no-ui)
-  * Cient Component [with Streamlit UI](run-client-with-ui)
+  * [Server](#run-server) Component
+  * Cient Component [without Streamlit UI](#run-client-no-ui)
+  * Cient Component [with Streamlit UI](#run-client-with-ui)
 
 ### Prerequisites for Client and Server: 
   * STEP 1 : Clone this Repo
