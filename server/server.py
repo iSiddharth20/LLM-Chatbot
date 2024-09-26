@@ -10,21 +10,22 @@ class OllamaResponse:
         self.llm = Ollama(model=self.model_name)
         self.query = None
         self.response = None
+        self.memory_chain = []
     
     def set_query(self, query):
         ''' Get Query from Client, Set Query for Further Processing '''
         self.query = query
-        # You can add Query formatting code here
+        self.memory_chain.append({"role": "user", "content": query})
     
     def get_response_from_ollama(self):
-        ''' Send Query to Ollama, Get Response from Ollama '''
-        self.response = self.llm.complete(self.query)
-        # You can add Response formatting code here
+        ''' Send Query and Memory to Ollama, Get Response from Ollama '''
+        if not len(self.memory_chain) == 1: 
+            query = "\n".join([f"{msg['role']}: {msg['content']}" for msg in self.memory_chain])
+            self.response = self.llm.complete(query)            
+        else:
+            self.response = self.llm.complete(self.query)
+        self.memory_chain.append({"role": "assistant", "content": self.response})
     
-    def post_response(self):
-        ''' Send Response to Client '''
-        return self.response
-
 
 chatbot = OllamaResponse()
 
@@ -37,7 +38,7 @@ def receive_query(query: str):
 @app.post("/response/")
 def send_response():
     ''' Send Response to Client '''
-    return chatbot.post_response()
+    return chatbot.response
 
 
 if __name__ == '__main__':
@@ -49,7 +50,4 @@ if __name__ == '__main__':
     test_run.set_query(query)
     test_run.get_response_from_ollama()
 
-    response = test_run.post_response()
-
-    print(response)
-
+    print(test_run.response)
