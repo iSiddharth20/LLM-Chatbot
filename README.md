@@ -101,7 +101,7 @@
 
 - STEP 1 : [Optional but Recommended] Activate the created Conda Environment, Run command : `conda activate env_server`
   <br>&nbsp;&nbsp;NOTE: Activate conda environment with each new instance of Terminal
-- STEP 2 : Run command : `uvicorn app:app --host 0.0.0.0 --port 8000`
+- STEP 2 : Run command : `uvicorn server:app --host 0.0.0.0 --port 8000`
   <br>&nbsp;&nbsp;NOTE: You can change the Port Number, make sure to update it in .env file on client
 - IMP : Do not close the Terminal, else Server will Stop
 
