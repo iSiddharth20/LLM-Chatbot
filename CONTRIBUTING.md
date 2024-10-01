@@ -1,8 +1,8 @@
-# Ollama-FastAPI-LlamaIndex
+# Completely Local/Offline LLM Chatbot on your System
 
 ---
 
-Thank you for considering contributing to `Ollama-FastAPI-LlamaIndex`! Your contributions help improve this project and make it better for everyone.
+Thank you for considering contributing to this Project! Your contributions help improve this project and make it better for everyone.
 
 ---
 
