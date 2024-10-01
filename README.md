@@ -1,4 +1,4 @@
-# Ollama-FastAPI-LlamaIndex
+# Completely Local/Offline LLM Chatbot on your System
 
 #### Client-Server Architecture LLM Chatbot with optional Streamlit UI
 
